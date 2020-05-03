@@ -1,6 +1,11 @@
 # Covid
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+```
+Link for public URL: - http://covid-girish.surge.sh/
+Administrate: - admin@gmail.com
+AdminPassword: - Admin@12345
+```
 
 ## Development server
 
