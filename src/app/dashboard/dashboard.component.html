@@ -1,0 +1,50 @@
+<div class="container-lg">
+    <h3 class="text-center mrg"> Cronavirus India Data</h3>
+    <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2 sticky font-weight-bold">State/UT</div>
+            <div class="col-2 text-right font-weight-bold">Confirmed</div>
+            <div class="col-2 text-right font-weight-bold">Active</div>
+            <div class="col-2 text-right font-weight-bold">Recovered</div>
+            <div class="col-2 text-right font-weight-bold">Deceased</div>
+    </div>
+    <div *ngFor="let stateData of CountryData | slice:1">
+    <div  class=" mt-2 row ">
+        
+            <div class="col-2 "><button type="button" (click)="selectState(stateData.state)" class="btn btn-success " >></button></div>
+            <div class="col-2 " >{{stateData.state }}</div>
+            <div class=" col-2  text-right text-primary">{{stateData.confirmed  }}</div>
+            <div class=" col-2 text-right text-info ">{{stateData.active  }}</div>
+            <div class=" col-2 text-right text-success ">{{stateData.recovered }}</div>
+            <div class=" col-2 text-right text-danger ">{{stateData.deaths  }}</div>
+    </div>
+    <div [attr.id]=stateData.state class="mb-4" *ngIf="selectedState==stateData.state">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2 sticky font-weight-bold">District</div>
+            <div class="col-2 text-right font-weight-bold">Confirmed</div>
+            <div class="col-2 text-right font-weight-bold">Active</div>
+            <div class="col-2 text-right font-weight-bold">Recovered</div>
+            <div class="col-2 text-right font-weight-bold">Deceased</div>
+    </div>
+    <div  class="row " *ngFor="let Data of District">
+            <div class="col-2"></div>
+            <div class="col-2 districtcolor" >{{Data[0] }}</div>
+            <div class=" col-2 districtcolor text-right text-primary">{{Data[1].confirmed  }}</div>
+            <div class=" col-2 districtcolor text-right text-info ">{{Data[1].active  }}</div>
+            <div class=" col-2 districtcolor text-right text-success ">{{Data[1].recovered }}</div>
+            <div class=" col-2 districtcolor text-right text-danger ">{{Data[1].deceased  }}</div>
+        
+     </div>
+     </div>
+    
+</div>
+
+
+
+
+
+
+
+
+    
